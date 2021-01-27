@@ -2,21 +2,67 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
-//
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
+
+function remove(array, member){
+    let newArray = [...array];
+    for (let i = 0; i < newArray.length; i++) {
+        if (newArray[i] === member){
+            newArray.splice(i, 1);
+     }  
+      
+    }
+     
+    return newArray;
+}
+
+// let newArray = [...array];
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
+
+
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
+function sum(numbers) {
+    let sum = 0
+    for (let i = 0; i <numbers.length; i++) {
+        sum = sum + numbers[i] 
+    }
+    return sum;
+}
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
+function average(numbers) {
+    let total = 0
+    for (let i = 0; i <numbers.length; i++) {
+        total = total + numbers[i]
+    
+    var average = (total / numbers.length) 
+}
+    return average;
+}
+
+
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum(numbers) {  
+    let solution = null
+    if (numbers.length === 0) {
+        return
+    }
+    for (let smallest of numbers) {
+        if (solution === null || smallest < solution)
+        solution = smallest
+    }
+    return solution
+}
+    
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -42,8 +88,42 @@
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+
+
+// function selectionSort (numbers) {
+//     var arrayCopy = array.slice(0)
+
+//     numbers.sort(function(a,b) {
+//         return b-a})
+//     }
+
+
+
+
+
+
+//     for (let i = 0; i < arrayCopy.length; i++) {
+//     if (arrayCopy[i] === member){
+//             newArray.splice(i, 1);
+//      }  
+      
+//     }
+     
+//     return newArray;
+
+// }
+
+
+
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+
+// function textList (arr) {
+//     val arr = []
+//     return 
+//     array.tostring()
+// }
